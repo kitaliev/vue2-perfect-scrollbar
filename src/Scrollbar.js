@@ -12,6 +12,11 @@ export default {
       required: false,
       default: 'div'
     },
+    classString: {
+      type: String,
+      required: false,
+      default: ''
+    },
     watchOptions: {
       type: Boolean,
       required: false,
@@ -77,7 +82,7 @@ export default {
     return h(this.tag,
       {
         ref: 'container',
-        class: 'ps',
+        class: 'ps' . this.classString,
         on: this.$listeners
       },
       this.$slots.default)

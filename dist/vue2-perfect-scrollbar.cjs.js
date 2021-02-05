@@ -19,6 +19,11 @@ var PerfectScrollbar$1 = {
       required: false,
       default: 'div'
     },
+    classString: {
+      type: String,
+      required: false,
+      default: ''
+    },
     watchOptions: {
       type: Boolean,
       required: false,
@@ -84,7 +89,7 @@ var PerfectScrollbar$1 = {
     return h(this.tag,
       {
         ref: 'container',
-        class: 'ps',
+        class: 'ps' . this.classString,
         on: this.$listeners
       },
       this.$slots.default)
