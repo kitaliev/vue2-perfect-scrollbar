@@ -83,7 +83,7 @@ var PerfectScrollbar$1 = {
     return h(this.tag,
       {
         ref: 'container',
-        class: 'ps' . this.classString,
+        class: this.classString,
         on: this.$listeners
       },
       this.$slots.default)
